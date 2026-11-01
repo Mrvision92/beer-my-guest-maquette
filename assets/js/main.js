@@ -218,7 +218,7 @@
     var idx = 0;
     list.forEach(function (r, i) { if (r.slug === slug) idx = i; });
     var r = list[idx];
-    document.title = r.title + " — Nos réalisations | Beer My Guest";
+    document.title = "Maquette · " + r.title + " — Nos réalisations | Beer My Guest";
 
     var photos = r.photos.map(function (p, i) {
       return '<button type="button" data-lightbox-index="' + i + '" aria-label="Agrandir la photo ' + (i + 1) + '"><img src="' + img(p) + '" alt="' + esc(r.title) + " — photo " + (i + 1) + '" loading="lazy"></button>';
