@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maquette refonte Beer My Guest</title>
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,600&display=swap">
+<style>
+:root { --bg: #f4f1ec; --card: #ffffff; --ink: #221811; --muted: #66574a; --rule: #e2d9cc; --accent: #8a4b0b; --accent-ink: #ffffff;
+  --display: "Cormorant Garamond", Georgia, serif; --body: "DM Sans", "Helvetica Neue", Arial, sans-serif; }
+@media (prefers-color-scheme: dark) { :root { --bg: #17120e; --card: #221b15; --ink: #f0e8dd; --muted: #b3a493; --rule: #3a3028; --accent: #d9944a; --accent-ink: #1b130c; color-scheme: dark } }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--body); margin: 0; }
+.warn { background: var(--accent); color: var(--accent-ink); font-size: 14px; padding: 10px 16px; text-align: center; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 56px 20px 88px; display: grid; gap: 40px; }
+.kicker { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); }
+h1 { font: 600 clamp(38px, 5.4vw, 68px)/1.02 var(--display); margin: 10px 0 18px; text-wrap: balance; }
+h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
+.intro p { max-width: 66ch; color: var(--muted); margin: 0 0 12px; font-size: 17px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; margin-top: 14px; padding: 14px 24px; border-radius: 999px; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 600; }
+.btn:focus-visible, .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.card { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; text-decoration: none; color: inherit; transition: transform .25s ease; }
+.card:hover { transform: translateY(-3px); }
+.card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; background: var(--rule); }
+.card__body { display: grid; gap: 4px; padding: 16px 18px 18px; }
+.card strong { font: 600 23px/1.15 var(--display); }
+.card__body > span { color: var(--muted); font-size: 14.5px; }
+.tip { border-top: 1px solid var(--rule); padding-top: 22px; color: var(--muted); font-size: 15px; max-width: 75ch; }
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+</style>
+</head>
+<body>
+<div class="warn"><strong>Maquette de travail</strong> — proposition de refonte, pas le site officiel de Beer My Guest. Coordonnées et contenus marqués « Exemple » fictifs.</div>
+<div class="wrap">
+  <header class="intro">
+    <span class="kicker">Proposition de refonte · à reconstruire dans Wix Harmony · novembre 2026</span>
+    <h1>Maquette navigable <em>de la refonte</em></h1>
+    <p>Document de travail pour le développeur. Toutes les pages sont cliquables, sur ordinateur comme sur mobile. Les photos proviennent du site actuel ; les huit réalisations et les dates d’agenda sont des exemples à remplacer.</p>
+    <a class="btn" href="accueil.html">Ouvrir la maquette →</a>
+  </header>
+  <nav class="grid" aria-label="Pages de la maquette"><a class="card" href="accueil.html"><img src="assets/img/accueil-halles-toast.jpg" alt="" loading="lazy"><span class="card__body"><strong>Accueil</strong><span>Hero, publics, expériences signatures, réalisations, avis, agenda, carte cadeau</span></span></a><a class="card" href="realisations.html"><img src="assets/img/reception-invites.jpg" alt="" loading="lazy"><span class="card__body"><strong>Nos réalisations</strong><span>La refonte de la galerie : introduction, projets filtrables, appel à l’action</span></span></a><a class="card" href="realisation.html#r=soiree-bieres-abbaye"><img src="assets/img/soiree-abbaye-moine.jpg" alt="" loading="lazy"><span class="card__body"><strong>Fiche réalisation</strong><span>Modèle de page détaillée (8 exemples fictifs)</span></span></a><a class="card" href="team-building.html"><img src="assets/img/casino-table.jpg" alt="" loading="lazy"><span class="card__body"><strong>Team-building</strong><span>Les vrais formats, la méthode, les réalisations</span></span></a><a class="card" href="incentives.html"><img src="assets/img/soiree-abbaye-toast.jpg" alt="" loading="lazy"><span class="card__body"><strong>Incentives & séminaires</strong><span>Services DMC, visites, soirées, lieux exclusifs, transport</span></span></a><a class="card" href="particuliers.html"><img src="assets/img/particuliers-guide-famille.jpg" alt="" loading="lazy"><span class="card__body"><strong>Particuliers</strong><span>Jeu de piste bière, journée bière, balades, carte cadeau</span></span></a><a class="card" href="experiences.html"><img src="assets/img/tablee-bougies.jpg" alt="" loading="lazy"><span class="card__body"><strong>Expériences</strong><span>Catalogue des 18 activités réelles</span></span></a><a class="card" href="agenda.html"><img src="assets/img/jeu-piste-roadbook.jpg" alt="" loading="lazy"><span class="card__body"><strong>Agenda</strong><span>Événements à venir (Wix Events, dates fictives)</span></span></a><a class="card" href="a-propos.html"><img src="assets/img/equipe-reception.jpg" alt="" loading="lazy"><span class="card__body"><strong>À propos</strong><span>Magali, l’équipe, les valeurs</span></span></a><a class="card" href="contact.html"><img src="assets/img/lieu-halles.jpg" alt="" loading="lazy"><span class="card__body"><strong>Contact & devis</strong><span>Formulaire de devis structuré et FAQ</span></span></a><a class="card" href="blog.html"><img src="assets/img/blog-bar.jpg" alt="" loading="lazy"><span class="card__body"><strong>Journal</strong><span>Mise en page du blog</span></span></a><a class="card" href="dossier.html"><img src="assets/img/degustation-verres.jpg" alt="" loading="lazy"><span class="card__body"><strong>Guide Wix Harmony</strong><span>Reconstruction section par section, composants, limites</span></span></a></nav>
+  <p class="tip">Sur chaque page, le bouton « Notes Wix » en bas à gauche affiche, section par section, les composants Wix Harmony à utiliser. Le guide complet se trouve dans la page « Guide Wix Harmony ».</p>
+</div>
+</body>
+</html>
