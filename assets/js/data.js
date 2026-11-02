@@ -1,432 +1,581 @@
 /* ==========================================================================
-   Données du prototype.
-   Dans Wix, ces listes correspondent à des collections CMS (si le CMS est
-   disponible) ou à du contenu statique saisi page par page (sinon).
-   - realisations : réalisations passées (portfolio)   -> collection "Realisations"
-   - experiences  : activités réelles du site actuel   -> collection "Experiences"
-   - events       : événements à venir                 -> Wix Events (application)
+   Données du prototype (contenus répétés).
+   - activities  : les activités du site actuel (fiches Wix Stores), textes repris
+                   tels quels. Dans Wix : produits Wix Stores existants.
+   - realisations: EXEMPLES FICTIFS de mise en page (photos de la galerie actuelle,
+                   textes à remplacer). Dans Wix : collection CMS ou pages dupliquées.
    ========================================================================== */
 window.BMG = window.BMG || {};
 
-/* Catégories de réalisations (propositions de structure, à valider). */
-BMG.categories = [
-  { id: "team-building", label: "Team-building" },
-  { id: "entreprise", label: "Incentives & entreprises" },
-  { id: "gastronomie", label: "Expériences gastronomiques" },
-  { id: "bruxelles", label: "Découvertes de Bruxelles" },
-  { id: "prive", label: "Événements privés" }
+BMG.activities = [
+ {
+  "slug": "anvers-en-une-journee",
+  "title": "Anvers en une Journée",
+  "img": "anvers",
+  "featured": true,
+  "text": [
+   "Historique, audacieuse, élégante et résolument contemporaine : Anvers est une ville de",
+   "contrastes qui ne cesse de surprendre.",
+   "Son incroyable prospérité à travers les siècles se lit encore dans ses façades, ses églises et",
+   "ses maisons historiques. Mais Anvers, c’est aussi le diamant, la mode, l’architecture",
+   "contemporaine et l’un des plus grands ports d’Europe. Autant d’univers qui permettent de",
+   "créer une journée totalement sur mesure.",
+   "Une journée type ? Laissez-vous inspirer…",
+   "Plongez dans l’univers du diamant",
+   "Découvrez pourquoi Anvers est depuis des siècles l’une des capitales mondiales du diamant",
+   "et entrez dans les coulisses de cet univers fascinant.",
+   "Déjeunez dans un lieu exceptionnel",
+   "Une adresse historique au magnifique décor Art nouveau, un restaurant contemporain",
+   "avec vue sur le port… nous sélectionnons le cadre selon l’expérience recherchée.",
+   "Explorez le port d’Anvers",
+   "Embarquez à bord d’un bateau privé ou public pour découvrir depuis l’eau cet univers",
+   "portuaire impressionnant et une autre facette de la ville.",
+   "Et pourquoi pas…",
+   "Une visite des incontournables du centre historique, un city game, un parcours architecture",
+   "& design, une découverte de la mode anversoise, une expérience autour de Rubens et des",
+   "grands maîtres, un workshop chocolat, une dégustation de bières belges ou encore",
+   "quelques adresses confidentielles loin des circuits classiques.",
+   "Durée : de 1h à une journée complète",
+   "Groupes : 2 à 500 personnes",
+   "Lieu : Anvers – centre historique, quartier du diamant, port et autres quartiers selon le",
+   "programme",
+   "Format : entièrement sur mesure",
+   "Ce n’est qu’un exemple : Anvers offre énormément de possibilités. Dites-nous qui vous êtes,",
+   "le temps dont vous disposez et ce que vous aimez : nous imaginons votre journée sur",
+   "mesure."
+  ]
+ },
+ {
+  "slug": "animations-pour-vos-soirees",
+  "title": "Animations pour vos Soirées",
+  "img": "soiree-abbaye-invites",
+  "featured": true,
+  "text": [
+   "Ce sont souvent les petites touches qui font les grandes soirées ! Cocktail, dîner, incentive ou",
+   "événement d’entreprise : choisissez une ou plusieurs animations pour surprendre vos invités.",
+   "Mentaliste & Magicien",
+   "Close-up, magie et mentalisme directement auprès de vos convives.",
+   "Tintin & Capitaine Haddock (acteurs)",
+   "La touche belge par excellence : des comédiens emblématiques qui déambulent et interagissent",
+   "avec vos invités.",
+   "Chanteuses & Saxophone",
+   "Une ambiance musicale élégante et festive, avec la possibilité d’intégrer une touche résolument",
+   "belge.",
+   "Casino de la Bière",
+   "Jetons, dégustations à l’aveugle et challenges autour de nos tables de casino.",
+   "Elegant Beer Bar",
+   "Un véritable bar à bière élégant et éphémère, proposant une sélection de bières artisanales belges",
+   "d’exception, soigneusement choisies et bien loin des références classiques. Une expérience",
+   "premium, servie et présentée par nos experts.",
+   "Beer & Chocolate Bar",
+   "Un stand gourmand où vos invités découvrent et dégustent bières et chocolats à leur rythme.",
+   "Atelier Chocolat",
+   "Un stand interactif où chacun peut créer son propre chocolat, ou une animation gourmande",
+   "proposée au moment du dessert.",
+   "Caricaturistes",
+   "Une animation conviviale et un souvenir personnalisé à emporter.",
+   "Cabaret & Performers",
+   "Artistes, performances et véritable show pour donner une autre dimension à votre soirée.",
+   "Photobooth",
+   "Une animation accessible tout au long de la soirée et des souvenirs instantanés pour vos invités.",
+   "Et bien plus encore : DJ, musiciens, artistes ou concepts sur mesure. Dites-nous l’ambiance",
+   "recherchée et nous imaginons votre soirée !",
+   "Durée : de 1h à 4h ou plus",
+   "Groupes : de 10 à 400 participants",
+   "Lieu : hôtels, lieux privatisés ou lieux d’exception, à Bruxelles et ailleurs en Belgique",
+   "Format : une animation ou plusieurs concepts combinés",
+   "Composez votre soirée à la carte et demandez votre offre !"
+  ]
+ },
+ {
+  "slug": "top-chef-cocktail-biere",
+  "title": "Top Chef – Cocktail bière",
+  "img": "cocktail-biere",
+  "featured": true,
+  "text": [
+   "À vos shakers… prêts ? Créez !",
+   "Inspiré des célèbres concours culinaires télévisés, notre Top Chef – Cocktail Bière transforme votre groupe en équipes prêtes à s’affronter autour d’un challenge aussi créatif que convivial.",
+   "Bières, jus de fruits, sirops, fruits frais, alcools, décorations… tout est à votre disposition pour imaginer et réaliser vos propres cocktails autour de différents défis, dont un challenge final où votre créativité pourra totalement s’exprimer.",
+   "Et comme dans toute bonne compétition, chaque création passe devant notre jury fun et impitoyable ! Goût, présentation, respect du thème… chaque détail compte avant de désigner l’équipe gagnante.",
+   "Une version entièrement sans alcool est également possible.",
+   "Durée : 1h à 1h30",
+   "Groupes : de 1 à 40 participants",
+   "Lieu : dans vos locaux ou dans un espace privatisé spécialement pour votre groupe, à Bruxelles ou partout ailleurs en Belgique",
+   "Format : team building en petites équipes avec 3 cocktails à créer – option 100 % sans alcool possible",
+   "Créativité, compétition, cocktails et bonne humeur : formez vos équipes et demandez votre offre !"
+  ]
+ },
+ {
+  "slug": "casino-de-la-biere",
+  "title": "Casino de la Bière",
+  "img": "casino-table",
+  "featured": true,
+  "text": [
+   "Faites vos jeux… et misez sur la bonne bière !",
+   "Autour de nos tables de Casino de la Bière, nos croupiers-biérologues distribuent les jetons et servent les bières belges à l’aveugle. À vous ensuite de miser sur la bonne réponse : couleur, arômes, saveurs, provenance, degré d’alcool… Faites confiance à votre palais ! Une manière ludique et originale de découvrir la bière belge, avec juste ce qu’il faut de compétition pour challenger vos collègues.",
+   "Deux formats phares",
+   "Dégustation & Challenge",
+   "Une véritable activité de groupe de 1h à 1h30, pour maximum 30 participants. Tout le monde joue et déguste ensemble autour de nos tables.",
+   "Stand Casino de la Bière",
+   "Idéal pour une soirée incentive, un cocktail, une réception ou un événement d’entreprise. Les participants rejoignent les tables au fur et à mesure, jouent quelques parties et poursuivent leur soirée. L’animation peut durer 2h, 3h ou même accompagner votre événement pendant toute une journée.",
+   "Durée : de 1h à une journée complète, selon le format",
+   "Groupes : de 1 à 30 participants pour la formule dégustation – capacité beaucoup plus importante en format stand",
+   "Lieu : dans un espace réservé pour votre groupe, à Bruxelles ou partout ailleurs en Belgique",
+   "Format : dégustation en groupe ou animation en continu lors de votre événement",
+   "Jetons, dégustation à l’aveugle et bières belges : à vous de jouer ! Demandez votre offre et choisissez votre formule"
+  ]
+ },
+ {
+  "slug": "atelier-biere-dans-la-basilique",
+  "title": "Atelier bière dans la Basilique",
+  "img": "basilique-verres",
+  "featured": true,
+  "text": [
+   "Basilique, Panorama & Bières",
+   "Un monument exceptionnel, une vue spectaculaire et une dégustation que vos participants ne sont pas près d’oublier.",
+   "Entrez dans l’impressionnante Basilique Nationale de Koekelberg, joyau Art déco et l’un des monuments les plus étonnants de Bruxelles. Accompagné de votre guide, découvrez son architecture, son histoire et ses espaces monumentaux avant de prendre de la hauteur pour admirer un incroyable panorama à 360° sur Bruxelles.",
+   "Puis place à notre expérience « La Bière et l’Église » : une dégustation autour des bières",
+   "d’abbaye et trappistes qui retrace les liens fascinants entre traditions monastiques,",
+   "histoire et savoir-faire brassicole belge.",
+   "Une expérience culturelle et sensorielle dans un décor totalement hors du commun, qui",
+   "peut être adaptée sous différents formats selon la taille et les attentes de votre groupe.",
+   "Durée : 2h à 2h30",
+   "Groupes : de 1 à 120 participants, voire plus selon le format",
+   "Lieu : Basilique Nationale de Koekelberg, Bruxelles",
+   "Format : visite, panorama & expérience bière, adaptable selon votre Groupes",
+   "Envie d’un autre lieu d’exception ?",
+   "Nous pouvons également imaginer des expériences et dégustations dans d’autres lieux",
+   "emblématiques ou insolites : à l’Atomium, dans les ruines de l’ancien palais de Bruxelles, dans une",
+   "ancienne maison de guilde toujours dédiée à la bière, au cœur de brasseries méconnues… et bien",
+   "d’autres possibilités.",
+   "Vous cherchez un lieu qui sorte vraiment de l’ordinaire ? Parlez-nous de votre groupe et de vos",
+   "envies : nous créerons votre expérience sur mesure."
+  ]
+ },
+ {
+  "slug": "bruxelles-cachee-belgian-beer-world",
+  "title": "Bruxelles Cachée & Belgian Beer World",
+  "img": "lieu-rooftop",
+  "featured": true,
+  "text": [
+   "Et si vous découvriez ce qui se cache sous les rues de Bruxelles avant de prendre de la hauteur sur l’un de ses plus beaux rooftops ? Partez sur les traces du Bruxelles disparu : l’ancienne rivière aujourd’hui enfouie sous la ville, les quartiers transformés, les épidémies qui ont bouleversé la capitale et les histoires qui ont façonné son centre historique. Votre parcours vous mène jusqu’à la majestueuse Bourse de Bruxelles, entièrement rénovée, pour poursuivre l’expérience au Belgian",
+   "Beer World et découvrir un autre élément incontournable du patrimoine belge : sa culture brassicole.",
+   "Histoire, traditions, techniques de brassage et anecdotes : nul besoin d’être amateur de bière pour apprécier la visite. Ici, la bière se",
+   "découvre avant tout comme un véritable patrimoine culturel belge.",
+   "Et pour terminer en beauté : direction le rooftop de la Bourse, avec sa vue exceptionnelle sur Bruxelles et la possibilité de déguster une bière ou une alternative sans alcool.",
+   "Durée : de 1h à 2h",
+   "Groupes : de 2 à 300 participants",
+   "Lieu : Bourse de Bruxelles, centre historique",
+   "Bruxelles sous vos pieds, son histoire autour de vous et son panorama depuis les toits : demandez votre offre et découvrez la capitale autrement !"
+  ]
+ },
+ {
+  "slug": "city-tours-a-velo",
+  "title": "City Tours à Vélo",
+  "img": "velo-selfie",
+  "featured": true,
+  "text": [
+   "Bruxelles, Gand, Anvers, Bruges… découvrez la ville autrement, accompagné d’un guide local !",
+   "Enfourchez votre vélo et partez pour une balade dynamique entre incontournables, quartiers méconnus, anecdotes et",
+   "petites surprises. Plusieurs parcours sont déjà disponibles, mais chaque visite peut surtout être adaptée à votre groupe, à vos envies et à votre timing.",
+   "Choisissez votre parcours",
+   "• Les incontournables & hors des sentiers battus",
+   "• Architecture & patrimoine",
+   "• Histoire & culture",
+   "• Bande dessinée & Street Art",
+   "• Histoire brassicole",
+   "• Bière & Chocolat",
+   "• … ou un itinéraire entièrement sur mesure.",
+   "Et pourquoi ne pas ajouter une pause en chemin ? Café, bière, chocolat, visite de brasserie ou autre découverte locale : de nombreuses options peuvent compléter votre parcours.",
+   "Départ et arrivée où vous le souhaitez. Hôtel, lieu de conférence, restaurant, prochain rendez-vous… nous construisons",
+   "l’itinéraire en fonction de votre programme. Le départ et l’arrivée peuvent être au même endroit ou à deux endroits",
+   "différents.",
+   "Durée : généralement 2h à 3h, mais adaptable de 1h à une journée complète (jusqu’à 8h)",
+   "Groupes : de 2 à 120 participants",
+   "Vélos : principalement électriques, aujourd’hui devenus la norme, avec possibilité de vélos classiques sur demande",
+   "Lieu : Bruxelles, Gand, Anvers, Bruges et dans les principales villes, mais également partout ailleurs en Belgique sur",
+   "demande",
+   "Une ville, un vélo et votre propre itinéraire : dites-nous ce que vous souhaitez découvrir et demandez votre offre !"
+  ]
+ },
+ {
+  "slug": "visite-de-brasserie-historique-et-moderne",
+  "title": "Visite de brasserie historique et moderne",
+  "img": "brasserie-futs",
+  "featured": true,
+  "text": [
+   "Brasserie Historique & Bières Modernes 🍺",
+   "De la bière brassée comme autrefois aux créations d’aujourd’hui : découvrez Bruxelles à travers son histoire brassicole.",
+   "L’expérience commence dans une brasserie historique absolument unique, à deux pas de la Gare du Midi. Un véritable bijou bruxellois où la bière est encore produite selon des méthodes ancestrales, loin de l’industrialisation. Vous y découvrirez notamment le lambic, véritable bière historique pré-industrielle de Bruxelles, issue de la fermentation",
+   "spontanée. Si vous n’en avez jamais goûté, préparez-vous : ses arômes et son goût ne ressemblent à pratiquement aucune bière moderne. La surprise est garantie !",
+   "Poursuivez ensuite à pied vers le centre historique, accompagné de votre guide qui partagera anecdotes, histoires et curiosités bruxelloises.",
+   "Et pour terminer, changement d’époque ! Direction un bar bruxellois pour découvrir des bières contemporaines à travers une",
+   "dégustation à l’aveugle de trois bières et un quiz interactif.",
+   "Envie de pousser le contraste encore plus loin ?",
+   "Selon le timing et les disponibilités, il est également possible d’ajouter la visite d’une brasserie moderne. Vous découvrez alors",
+   "véritablement les deux visages de la bière bruxelloise : les méthodes d’autrefois face au brassage contemporain.",
+   "Durée : 1h à 3h, adaptable selon les options",
+   "Groupes : de 2 à 100 participants",
+   "Lieu : Bruxelles, départ à proximité de la Gare du Midi et parcours vers le centre historique",
+   "Envie d’une expérience vraiment locale ? Demandez votre offre et découvrez Bruxelles de la bière pré-industrielle aux créations d’aujourd’hui !"
+  ]
+ },
+ {
+  "slug": "pairing-biere-et-chocolat",
+  "title": "Pairing bière & chocolat",
+  "img": "chocolaterie",
+  "featured": true,
+  "text": [
+   "Beer & Chocolate Pairing – Deux icônes belges, une expérience 🍺🍫",
+   "Et si deux des plus grands symboles de la Belgique formaient aussi l’accord parfait ?",
+   "Guidé par un zythologue professionnel et dynamique, découvrez les associations surprenantes",
+   "entre bières belges et chocolats artisanaux. Au programme : 4 bières soigneusement",
+   "sélectionnées et 6 pralines de qualité, à déguster et à associer pour comprendre comment",
+   "arômes, textures et saveurs peuvent se compléter… ou parfois vous surprendre !",
+   "Une expérience gourmande, interactive et résolument belge, qui mêle dégustation, anecdotes,",
+   "culture et convivialité.",
+   "Pas de bière ? Aucun problème : des alternatives sans alcool peuvent être proposées sur",
+   "demande afin que chacun puisse participer pleinement à l’expérience.",
+   "Durée : 1h à 1h30",
+   "Groupes : de 2 à 300 participants, voire plus sur demande",
+   "Lieu & format : dans l’un de nos lieux partenaires au cœur du centre historique de Bruxelles,",
+   "dans un autre lieu sélectionné spécialement pour votre groupe, ou directement sur le lieu de",
+   "votre conférence ou événement, partout en Belgique",
+   "Envie de surprendre votre groupe avec deux incontournables belges en une seule expérience ?",
+   "Demandez votre offre et créons ensemble votre Beer & Chocolate Pairing !"
+  ]
+ },
+ {
+  "slug": "beer-tasting-version-quiz",
+  "title": "Beer Tasting – version quiz",
+  "img": "tablee-bougies",
+  "featured": true,
+  "text": [
+   "Beer Tasting Quiz – Notre expérience signature 🍺",
+   "Si nous sommes experts en activités et expériences à Bruxelles et partout en Belgique, la bière",
+   "reste incontestablement l’une de nos grandes spécialités !",
+   "Guidé par un zythologue professionnel et dynamique, plongez dans l’univers fascinant de la",
+   "bière belge à travers une dégustation interactive mêlant histoire, culture, anecdotes et",
+   "challenges. Dégustation à l’aveugle, quiz et découvertes sensorielles : une expérience",
+   "conviviale, accessible et résolument belge.",
+   "L’activité peut être organisée dans l’un de nos lieux partenaires ou directement sur votre lieu de",
+   "réunion, conférence ou événement. Des alternatives sans alcool sont toujours possibles sur",
+   "demande.",
+   "Envie d’aller plus loin ?",
+   "Ajoutez notre Challenge Arômes ou optez pour notre formule autour des bières d’abbaye et",
+   "trappistes, animée par un véritable Père trappiste ! Plongez dans l’univers des monastères, de",
+   "leurs traditions et de leurs bières à travers une mise en scène aussi surprenante qu’inoubliable.",
+   "Et pour une expérience encore plus personnalisée, nous pouvons également créer une",
+   "dégustation entièrement sur mesure.",
+   "Durée : généralement 1h à 1h30, adaptable sur demande",
+   "Groupes : de 2 à 300 participants",
+   "Lieu & format : dans l’un de nos lieux partenaires au cœur du centre historique de Bruxelles, ou",
+   "directement sur le lieu de votre conférence ou événement, partout en Belgique",
+   "Envie de découvrir la bière belge autrement ? Demandez votre offre et créons ensemble une",
+   "expérience mémorable !"
+  ]
+ },
+ {
+  "slug": "visite-guidee-pedestre",
+  "title": "Visite guidée pédestre",
+  "img": "street-art",
+  "featured": true,
+  "text": [
+   "Découvrez Bruxelles avec un local",
+   "Explorez Bruxelles à pied et découvrez la capitale bien au-delà de ses incontournables !",
+   "Accompagné d’un guide local passionné, votre groupe parcourt les lieux emblématiques de la ville, mais aussi ses petites rues, ses anecdotes et ses curiosités. De la Grand-Place aux quartiers moins connus,",
+   "chaque balade est adaptée à vos envies et à votre timing.",
+   "Choisissez votre Bruxelles",
+   "• Découverte & incontournables",
+   "• Art nouveau & Art déco",
+   "• Bande dessinée & Street Art",
+   "• Quartier Royal",
+   "• Quartier européen",
+   "• Histoire de Bruxelles",
+   "• Bruxelles hors des sentiers battus",
+   "• … et bien plus encore !",
+   "Toutes nos visites sont modulables et peuvent être enrichies selon vos envies : musée, monument, exposition",
+   "ou autre expérience bruxelloise.",
+   "Durée : de 1h à une journée complète",
+   "Groupes : de 2 à 500 participants",
+   "Parcours : entièrement sur mesure",
+   "Une heure ou une journée, classique ou insolite : dites-nous ce que vous souhaitez découvrir et nous créerons votre Bruxelles. Demandez votre offre !"
+  ]
+ },
+ {
+  "slug": "bruxelles-royal-coudenberg",
+  "title": "Bruxelles Royal & les secrets du Palais du Coudenberg",
+  "img": "lieu-ruines",
+  "featured": true,
+  "text": [
+   "Bruxelles Royal & les secrets du Palais du Coudenberg",
+   "Découvrez l’un des quartiers les plus majestueux de Bruxelles et plongez dans les",
+   "coulisses de son histoire !",
+   "Du Parc de Bruxelles à la Place Royale, explorez le Quartier Royal à travers son",
+   "architecture, ses anecdotes, ses personnages et les grandes pages de l’histoire",
+   "belge. Rois et reines, pouvoir, transformations de la ville et passé colonial : votre",
+   "guide vous dévoile un Bruxelles royal bien plus surprenant qu’il n’y paraît.",
+   "Puis, changement de décor : descendez sous la ville pour explorer les vestiges du",
+   "Palais du Coudenberg, ancienne résidence de Charles Quint et de nombreux",
+   "souverains européens. Un véritable voyage dans le Bruxelles disparu, caché sous",
+   "vos pieds !",
+   "Pour une expérience encore plus conviviale, la visite peut se terminer par une",
+   "dégustation de bières belges accompagnée d’un quiz.",
+   "Durée : à partir de 2h",
+   "Groupes : de 2 à 200 participants",
+   "Options : dégustation de bières, quiz et formules sur mesure",
+   "Envie de découvrir les secrets du Bruxelles royal ? Demandez votre offre et",
+   "adaptons l’expérience à votre groupe !"
+  ]
+ },
+ {
+  "slug": "workshop-chocolat-biere",
+  "title": "Workshop Chocolat & Bière",
+  "img": "atelier-chocolat",
+  "featured": true,
+  "text": [
+   "Beer Quiz & Chocolate Workshop : le meilleur de la Belgique en une activité !",
+   "Une activité deux-en-un, originale, gourmande et délicieusement belge ! Votre groupe",
+   "est divisé en deux équipes qui alternent entre deux expériences emblématiques.",
+   "Beer Quiz",
+   "Testez vos sens et vos connaissances autour de 4 dégustations de bières belges !",
+   "Verres opaques, questions surprenantes et petits défis viennent pimenter l’expérience.",
+   "Couleur, arômes, degré d’alcool… êtes-vous vraiment sûrs de vos réponses ? Un",
+   "challenge convivial où culture brassicole, fun et esprit d’équipe se rencontrent.",
+   "Atelier Chocolat",
+   "Place à la créativité ! Aux côtés d’un maître chocolatier bruxellois, découvrez les",
+   "secrets du chocolat belge et réalisez vos propres créations à déguster ou à emporter.",
+   "Un moment gourmand, artisanal et 100 % belge.",
+   "L’activité peut être organisée dans le centre de Bruxelles, dans un autre lieu adapté",
+   "ou directement sur votre lieu de conférence ou d’événement. Le format est",
+   "entièrement modulable selon votre groupe, votre budget et vos contraintes",
+   "logistiques.",
+   "Durée : 2h à 3h",
+   "Groupes : de 2 à 180 participants",
+   "Lieu & format : sur mesure",
+   "Envie de réunir bière, chocolat et team spirit ? Demandez votre offre et créons",
+   "ensemble la formule idéale pour votre groupe !"
+  ]
+ },
+ {
+  "slug": "explorez-les-institutions-europeennes",
+  "title": "Explorez les institutions européennes",
+  "img": "velo-cinquantenaire",
+  "featured": true,
+  "text": [
+   "Découvrez l’Europe au cœur de Bruxelles",
+   "Entrez dans les coulisses de l’Union européenne et découvrez pourquoi Bruxelles est devenue l’un des centres politiques les plus importants au monde.",
+   "Accompagnés par nos guides, explorez le Quartier européen, ses institutions et ses lieux emblématiques : Parlement européen, Commission européenne, Conseil européen, Parc Léopold, Cinquantenaire… Une visite vivante et accessible pour comprendre l’Europe, son histoire et l’impact concret de ses décisions sur notre quotidien.",
+   "Plusieurs formules sont possibles",
+   "• Balade guidée dans le Quartier européen",
+   "• Balade + Parlamentarium, pour une expérience interactive et immersive",
+   "• Balade + Maison de l’Histoire européenne",
+   "• Balade + Parlement européen et accès à l’Hémicycle, avec la possibilité d’organiser une rencontre avec un professionnel des institutions européennes",
+   "• Visites de la Commission européenne ou du Conseil de l’Union européenne, sur demande et selon les disponibilités",
+   "Chaque programme est entièrement adaptable aux intérêts de votre groupe : politique européenne, économie,",
+   "finance, histoire, fonctionnement des institutions ou simplement découverte de Bruxelles en tant que capitale",
+   "européenne.",
+   "Vous souhaitez aller plus loin ? Transformez la visite en demi-journée ou en journée complète et combinez-la",
+   "avec d’autres expériences bruxelloises : atelier chocolat, dégustation de bières, jeu de piste, visite culturelle ou",
+   "activité de team building.",
+   "Durée : de 1h30 à 3h ou programme à la journée",
+   "Groupes : de 2 à 500 participants",
+   "Programme : entièrement sur mesure et selon les disponibilités des institutions",
+   "Une heure, une demi-journée ou une journée entière : dites-nous ce que vous recherchez et nous créerons votre",
+   "expérience européenne à Bruxelles. Demandez votre offre !"
+  ]
+ },
+ {
+  "slug": "jeu-de-piste-gourmand",
+  "title": "Jeu de piste gourmand",
+  "img": "jeu-piste-equipe",
+  "featured": true,
+  "text": [
+   "Découvrez Bruxelles comme vous ne l’avez jamais vue !",
+   "Partez à l’aventure au cœur de Bruxelles avec nos jeux de piste interactifs ! En équipe, suivez les indices,",
+   "relevez des challenges et découvrez la ville autrement, entre anecdotes insolites, culture et bonne humeur.",
+   "Nos parcours vous entraînent dans les petites ruelles et à la découverte des curiosités cachées du centre",
+   "historique, tout en passant par les incontournables comme la Grand-Place et Manneken Pis. Un parfait",
+   "équilibre entre Bruxelles hors des sentiers battus et ses lieux emblématiques.",
+   "Plusieurs expériences sont disponibles :",
+   "• Jeu de piste BD, Street Art & Chocolat",
+   "• Jeu de piste Bière & Chocolat",
+   "• Jeux de piste sur mesure, adaptés à votre groupe et à vos envies",
+   "Idéal pour les entreprises, team buildings, groupes d’amis ou événements privés, chaque jeu de piste mêle",
+   "découverte, fun et esprit d’équipe pour une expérience originale au cœur de Bruxelles.",
+   "Durée : 2h à 2h30",
+   "Groupes : de 2 à 300 participants",
+   "Envie de tenter l’aventure ? Demandez votre offre et trouvez la formule idéale pour votre groupe !"
+  ]
+ },
+ {
+  "slug": "balade-gourmande-food-tour",
+  "title": "Balade Gourmande – Food Tour",
+  "img": "balade-toast",
+  "featured": true,
+  "text": [
+   "Notre incontournable et l’un de nos best-sellers pour découvrir la ville autrement ! A",
+   "Bruxelles, mais aussi possible à Bruges, Gand & Anvers.",
+   "Explorez la ville avec un guide local passionné, découvrez ses incontournables et ses",
+   "petites rues plus confidentielles, écoutez ses anecdotes et, surtout, goûtez à ce que la",
+   "Belgique fait de meilleur. Notre balade gourmande – Food Tour combine découverte de la",
+   "ville, chocolat, bière et convivialité dans une seule expérience.",
+   "Bruxelles et ses pralines",
+   "Au fil de la balade dans le centre historique, votre guide vous emmène à la découverte des",
+   "lieux emblématiques et des secrets de Bruxelles. En chemin, halte chez deux chocolatiers,",
+   "avec dégustation de trois pralines artisanales soigneusement sélectionnées.",
+   "La halte bière",
+   "Direction ensuite un bar typiquement bruxellois pour déguster deux bières belges en format",
+   "dégustation. Servies à l’aveugle, elles deviennent l’occasion de jouer, comparer, échanger",
+   "et découvrir la richesse de notre culture brassicole.",
+   "Une expérience à la fois culturelle, gourmande et interactive, idéale pour découvrir la ville",
+   "sans jamais avoir l’impression de suivre une visite guidée traditionnelle.",
+   "Encore plus gourmand ?",
+   "De nombreuses options peuvent être ajoutées sur demande : gaufre chaude, frites",
+   "traditionnelles, cuberdons, chocolat chaud… et pendant la période des fêtes, pourquoi ne",
+   "pas ajouter un vin chaud et transformer la balade en véritable expérience de Noël ?",
+   "Dégustations supplémentaires, autres spécialités belges, parcours plus court ou plus long :",
+   "tout peut être adapté à votre groupe, à la saison et à votre programme.",
+   "Durée : idéalement 2h à 2h30, adaptable sur demande",
+   "Groupes : de 2 à 400 participants",
+   "Lieu : Bruxelles – centre historique. Également possible à Bruges, Gand et Anvers",
+   "Format : visite guidée à pied & dégustations gourmandes, entièrement adaptable",
+   "Un véritable best-seller pour goûter la ville autant que la découvrir. Demandez votre offre",
+   "sur mesure !"
+  ]
+ },
+ {
+  "slug": "balade-biere-et-chocolat",
+  "title": "Balade bière et chocolat",
+  "img": "balade-manneken",
+  "featured": false,
+  "text": [
+   "Balade Bière & Chocolat – Une délicieuse façon de découvrir Bruxelles",
+   "À Bruxelles – et aussi à Gand ou Bruges – Beer My Guest vous invite à découvrir la gastronomie belge autrement, au fil de balades gourmandes, locales et conviviales.",
+   "Partez à la découverte de Bruxelles à travers ses ruelles pleines de charme, ses monuments incontournables comme la Grand Place ou le Manneken Pis, et surtout à travers ses saveurs les plus emblématiques !",
+   "Au programme : bières artisanales et chocolats fins, dégustés chez des chocolatiers emblématiques et dans un estaminet de caractère. Une balade conviviale où l’on goûte autant à la culture locale qu’aux spécialités gourmandes.",
+   "C’est un succès à chaque fois : un moment ludique, chaleureux et savoureux qui ravit tous les publics.",
+   "La balade standard dure entre 2h et 2h30, mais peut être écourtée ou prolongée selon vos envies.",
+   "Et pour les plus gourmands, on peut aussi ajouter d’autres mets typiquement belges : spéculoos, croquettes de crevettes…",
+   "Petit conseil : ne venez pas avec l’idée de faire régime !",
+   "En bref",
+   "• Capacité : de 8 à 300 personnes",
+   "• Durée : 2h - à déterminer",
+   "• Langue : FR/NL/EN",
+   "• Lieu : Bruxelles, Lille, Bordeaux ou Strasbourg",
+   "En option",
+   "• Suivi d'un dîner",
+   "• ajouter du spéculoos",
+   "• ajouter des croquettes de crevettes"
+  ]
+ },
+ {
+  "slug": "jeu-de-piste-chocolat-et-biere",
+  "title": "Jeu de piste chocolat et bière (ou juste chocolat)",
+  "img": "balade-chocolat",
+  "featured": false,
+  "text": [
+   "Un Jeu de Piste Gourmand et Ludique entre Collègues !",
+   "À la recherche d’une activité originale à Bruxelles pour votre entreprise, votre équipe ou votre groupe de collègues ?",
+   "Offrez-leur une expérience de team building unique, mêlant jeu de piste, découverte culturelle et plaisirs gourmands !",
+   "Découvrez Bruxelles autrement grâce à un jeu de piste dynamique et interactif",
+   "Le point de départ se situe au Café des Halles, en plein cœur de Bruxelles. Sur place, un animateur passionné vous accueillera et vous expliquera les règles du jeu. Ensuite, munis de votre roadbook, partez en équipe pour résoudre une enquête urbaine ponctuée d’épreuves ludiques : énigmes, quiz d’observation, défis photo et plus encore !",
+   "Des pauses gourmandes qui font la différence",
+   "Tout au long de votre parcours, savourez des dégustations chez trois chocolatiers d’exception et goûtez à des bières locales dans deux bars typiques de Bruxelles.",
+   "Et si je ne bois pas ? Pas de souci !",
+   "L’activité est parfaitement adaptée aux personnes qui ne consomment pas d’alcool ou qui ont des intolérances alimentaires : des alternatives sont toujours prévues pour que tout le monde profite pleinement de l’expérience.",
+   "Un esprit d’équipe… jusqu’au bout !",
+   "À la fin du jeu, retrouvez l’animateur pour la correction des épreuves, le décompte des points et la remise du prix à l’équipe gagnante dans une ambiance conviviale.",
+   "Pourquoi choisir ce jeu de piste ?",
+   "• Une activité idéale pour vos séminaires d’entreprise, afterworks, ou événements de team building à Bruxelles",
+   "• Parfait pour renforcer la cohésion, favoriser l’échange et découvrir la ville autrement",
+   "• Une expérience accessible à tous, adaptée à tous les régimes alimentaires et niveaux de forme physique",
+   "Réservez une activité insolite et sur-mesure ou standard pour votre équipe à Bruxelles !",
+   "En bref",
+   "• Capacité : de 2 à 200 personnes",
+   "• Durée : 2h30 à 3h (ou sur mersure)",
+   "• Langue : FR/EN",
+   "• version standard ou sur mesure",
+   "En option",
+   "• Coffret cadeau gourmand",
+   "• Trophées de Manneken Pis en chocolat"
+  ]
+ },
+ {
+  "slug": "degustation-insolite-musee-des-egouts",
+  "title": "Dégustation insolite dans le musée des égouts",
+  "img": "egouts-tunnel",
+  "featured": false,
+  "text": [
+   "Gommez cette grimace !",
+   "Il ne s’agit pas ici de vous faire patauger parmi les rats dans un souterrain sombre, ni de vous faire boire une bière à l’eau croupie ! Cette visite du Musée des Égouts vous plongera tout au contraire dans la passionnante histoire locale de l’eau, cet élément clé qui façonna la cité et demeure fondamentale dans la fabrication de la bière. Petite explication.",
+   "L’eau.",
+   "Cet élément a façonné le visage de Bruxelles, la cité s’organisant depuis un millénaire autour de la gestion de l’eau. Source de vie, l’eau peut également favoriser et propager les grandes épidémies meurtrières. Dans les villes, elle déplace le paysage industriel, délocalise des populations entières, et demande à l’homme une créativité sans fin pour garantir une vie saine. Parmi ces adaptations nécessaires à l’homme : la construction des égouts!",
+   "Mais que vient faire la bière là-dedans?",
+   "Composé de 90% d’eau, l’origine et l’histoire des brasseries sont étroitement liées à la gestion de l’eau. Pendant longtemps, la bière était une alternative à l’eau, voire un médicament prescrit par les médecins ! Depuis des siècles, les brasseurs ont dû s’adapter. Aujourd’hui, la réputation des bières belges n’est plus à refaire, mais les brasseurs doivent faire face à de nouveaux enjeux.",
+   "Curieux ?",
+   "Vous voulez en savoir plus ? L’expérience commence par une petite visite du musée des égouts, suivi par une belle dégustation bière sur place! Soyez certains, cette visite vaut le détour!"
+  ]
+ },
+ {
+  "slug": "bar-a-bieres-elegant",
+  "title": "Bar à bières élégant",
+  "img": "bar-bieres-bouteilles",
+  "featured": false,
+  "text": [
+   "Nos biérologues sélectionnent pour vous un minimum de 5 bières de Belgique. Ils servent, présentent les bières et accompagnent les participants dans leur dégustation (goûts, arômes, style…) Blonde légère, IPA amère et fruitée, stout aux notes de café, ambrées aux arômes de caramel, lambic aux notes acidulées, bières vieillies… Chacun trouvera son bonheur dans une animation à la fois gourmande, ludique et instructive."
+  ]
+ }
 ];
 
-/* --------------------------------------------------------------------------
-   RÉALISATIONS — EXEMPLES FICTIFS
-   Les photos proviennent de la galerie actuelle du site. Les textes sont des
-   contenus de démonstration : ils ne décrivent pas de véritables événements
-   et doivent être remplacés par les informations fournies par la cliente.
-   -------------------------------------------------------------------------- */
+/* Réalisations — exemples fictifs (à remplacer par les vraies informations). */
 BMG.realisations = [
-  {
-    slug: "casino-de-la-biere-seminaire",
-    demo: true,
-    title: "Un Casino de la Bière pour clôturer un séminaire",
-    category: "team-building",
-    tags: ["team-building"],
-    client: "Entreprise",
-    lieu: "Bruxelles · espace privatisé",
-    activite: "Casino de la Bière",
-    format: "Fin de journée · animation de groupe",
-    cover: "casino-table",
-    excerpt: "Jetons, croupiers-biérologues et bières belges servies à l’aveugle : un challenge convivial pour terminer une journée de travail en beauté.",
-    contexte: "L’entreprise souhaitait une activité courte et fédératrice pour clôturer son séminaire : accessible à tous, amateurs de bière comme néophytes, et qui laisse une vraie place à l’échange entre collègues.",
-    steps: [
-      { t: "Accueil et règles du jeu", d: "Les croupiers-biérologues présentent le principe et distribuent les jetons autour des tables de casino." },
-      { t: "Dégustations à l’aveugle", d: "Chaque bière est servie en galopin. Robe, arômes, provenance, degré d’alcool : chacun mise sur son palais." },
-      { t: "Révélations et remise des prix", d: "Les réponses sont dévoilées, les plus perspicaces sont récompensés et la soirée se poursuit autour du bar." }
-    ],
-    photos: ["casino-table", "casino-detail", "casino-noir-blanc", "casino-rose", "degustation-mystere", "degustation-verres"]
-  },
-  {
-    slug: "soiree-bieres-abbaye",
-    demo: true,
-    title: "Une soirée d’entreprise au temps des abbayes",
-    category: "entreprise",
-    tags: ["entreprise"],
-    client: "Agence événementielle (MICE)",
-    lieu: "Bruxelles · lieu privatisé",
-    activite: "Animation de soirée et bières d’abbaye",
-    format: "Réception · animation en continu",
-    cover: "soiree-abbaye-moine",
-    excerpt: "Moines comédiens, lueur des bougies et bières d’abbaye : une mise en scène immersive pour accueillir les invités d’une agence partenaire.",
-    contexte: "L’agence recherchait une animation à forte identité belge pour la soirée de ses invités : une ambiance qui se crée dès l’arrivée et une histoire à raconter autour de la bière.",
-    steps: [
-      { t: "Un accueil mis en scène", d: "Des comédiens en tenue de moines accueillent les invités et donnent immédiatement le ton de la soirée." },
-      { t: "Le bar de l’abbaye", d: "Dégustation de bières d’abbaye et trappistes, racontée par nos biérologues : traditions monastiques et savoir-faire brassicole." },
-      { t: "Une animation qui accompagne la soirée", d: "Les invités vont et viennent au fil de la réception ; l’animation se poursuit sans interrompre les échanges." }
-    ],
-    photos: ["soiree-abbaye-moine", "soiree-abbaye-invites", "soiree-abbaye-toast", "soiree-abbaye-moines"]
-  },
-  {
-    slug: "reception-bar-a-bieres",
-    demo: true,
-    title: "Un bar à bières élégant pour une réception d’entreprise",
-    category: "entreprise",
-    tags: ["entreprise"],
-    client: "Entreprise",
-    lieu: "Bruxelles · salon historique",
-    activite: "Bar à bières élégant",
-    format: "Cocktail · réception",
-    cover: "reception-buffet",
-    excerpt: "Une sélection de bières belges d’exception, servie et commentée par nos biérologues tout au long de la réception.",
-    contexte: "Pour une réception réunissant collaborateurs et partenaires, l’entreprise souhaitait remplacer le bar classique par une animation qualitative, élégante et résolument belge.",
-    steps: [
-      { t: "Une sélection sur mesure", d: "Au minimum cinq bières de Belgique, choisies pour leur diversité : blonde légère, IPA, stout, ambrée, lambic, bières vieillies…" },
-      { t: "Un service commenté", d: "Nos biérologues servent, présentent chaque bière et accompagnent les invités : goûts, arômes, styles." },
-      { t: "Au cœur de la réception", d: "Le bar s’intègre au buffet et au déroulé de l’événement, pour que la dégustation reste un moment d’échange." }
-    ],
-    photos: ["reception-buffet", "reception-invites", "equipe-reception", "reception-bar", "bar-bieres-bouteilles", "biere-houblon"]
-  },
-  {
-    slug: "beer-quiz-atelier-chocolat",
-    demo: true,
-    title: "Beer Quiz et atelier chocolat : deux icônes belges",
-    category: "gastronomie",
-    tags: ["gastronomie", "team-building"],
-    client: "Entreprise",
-    lieu: "Bruxelles · centre historique",
-    activite: "Workshop Chocolat & Bière",
-    format: "Deux ateliers en alternance",
-    cover: "atelier-chocolat",
-    excerpt: "Deux équipes, deux ateliers : un quiz de dégustation à l’aveugle d’un côté, la création de chocolats aux côtés d’un maître chocolatier de l’autre.",
-    contexte: "Le groupe souhaitait découvrir deux icônes belges en une seule activité, avec un format participatif où chacun repart avec ses propres créations.",
-    steps: [
-      { t: "Deux équipes, deux univers", d: "Le groupe est divisé en deux équipes qui alternent entre les deux expériences." },
-      { t: "Beer Quiz", d: "Quatre bières belges en verres opaques, des questions surprenantes et de petits défis : couleur, arômes, degré d’alcool…" },
-      { t: "Atelier chocolat", d: "Aux côtés d’un maître chocolatier bruxellois, chacun découvre les secrets du chocolat belge et réalise ses propres créations." }
-    ],
-    photos: ["atelier-chocolat", "chocolat-beer-my-guest", "chocolat-creation", "chocolat-atelier-tablier", "soiree-chocolat-neon"]
-  },
-  {
-    slug: "bruxelles-a-velo",
-    demo: true,
-    title: "Bruxelles à vélo, entre street art et brasseries",
-    category: "bruxelles",
-    tags: ["bruxelles", "team-building"],
-    client: "Groupe international",
-    lieu: "Bruxelles · du centre au Cinquantenaire",
-    activite: "City tour à vélo",
-    format: "Demi-journée · guide local",
-    cover: "velo-selfie",
-    excerpt: "Une balade guidée à vélo électrique pour découvrir les incontournables, les fresques BD et une brasserie bruxelloise.",
-    contexte: "Le groupe disposait d’une demi-journée et souhaitait découvrir un maximum de Bruxelles de manière active, avec une pause bière en chemin.",
-    steps: [
-      { t: "Départ depuis l’hôtel", d: "Remise des vélos — principalement électriques — et briefing avec le guide." },
-      { t: "Incontournables et parcours BD", d: "Palais royal, Cinquantenaire, fresques de bande dessinée : les grands sites et les petites histoires de la ville." },
-      { t: "Halte brassicole", d: "Arrêt dans une brasserie pour découvrir et déguster des bières locales avant le retour." }
-    ],
-    photos: ["velo-selfie", "velo-brasserie", "velo-bd", "velo-cinquantenaire", "velo-silos"]
-  },
-  {
-    slug: "degustation-basilique-koekelberg",
-    demo: true,
-    title: "Bières d’abbaye au cœur de la Basilique de Koekelberg",
-    category: "entreprise",
-    tags: ["entreprise", "bruxelles"],
-    client: "Agence réceptive",
-    lieu: "Basilique nationale de Koekelberg",
-    activite: "Atelier « La Bière et l’Église »",
-    format: "Visite guidée · panorama · dégustation",
-    cover: "basilique-nef",
-    excerpt: "Visite guidée, panorama à 360° sur Bruxelles puis dégustation de bières d’abbaye et trappistes dans un décor Art déco hors du commun.",
-    contexte: "Pour un programme incentive, l’agence cherchait un lieu d’exception, encore méconnu des visiteurs, et une activité culturelle qui reste conviviale.",
-    steps: [
-      { t: "Découverte de la basilique", d: "Avec le guide, le groupe découvre l’architecture Art déco, l’histoire et les espaces monumentaux du bâtiment." },
-      { t: "Panorama à 360°", d: "Montée vers les hauteurs pour admirer Bruxelles sous un angle inédit." },
-      { t: "« La Bière et l’Église »", d: "Dégustation de bières d’abbaye et trappistes qui retrace les liens entre traditions monastiques et savoir-faire brassicole belge." }
-    ],
-    photos: ["basilique-nef", "basilique-verres", "basilique-degustation", "basilique-vitrail"]
-  },
-  {
-    slug: "jeu-de-piste-anniversaire",
-    demo: true,
-    title: "Un jeu de piste bière pour fêter un anniversaire",
-    category: "prive",
-    tags: ["prive", "bruxelles"],
-    client: "Groupe privé · entre amis",
-    lieu: "Bruxelles · centre historique",
-    activite: "Jeu de piste bière",
-    format: "Équipes de 4 à 8 · roadbook",
-    cover: "jeu-piste-equipe",
-    excerpt: "Roadbook en main, les équipes ont sillonné les ruelles de Bruxelles entre énigmes, défis photo et dégustations à l’aveugle.",
-    contexte: "Un groupe d’amis cherchait une activité originale pour célébrer un anniversaire : ludique, en plein air et ponctuée de pauses gourmandes.",
-    steps: [
-      { t: "Accueil et roadbook", d: "L’animateur accueille les équipes, explique les règles et remet à chacune son roadbook." },
-      { t: "L’enquête dans les ruelles", d: "Énigmes, défis photo et quiz d’observation entre monuments incontournables et fresques urbaines." },
-      { t: "Dégustations à l’aveugle", d: "Des galopins de bière dans trois bars emblématiques ; pour gagner, il faut deviner les saveurs." },
-      { t: "Révélation du grand gagnant", d: "L’animateur dévoile les réponses et sacre l’équipe gagnante." }
-    ],
-    photos: ["jeu-piste-equipe", "jeu-piste-roadbook", "jeu-piste-couple", "jeu-piste-groupe", "jeu-piste-in-den-vos", "jeu-piste-belgian-beer"]
-  },
-  {
-    slug: "balade-gourmande-famille",
-    demo: true,
-    title: "Une balade gourmande en famille au cœur de Bruxelles",
-    category: "gastronomie",
-    tags: ["gastronomie", "prive", "bruxelles"],
-    client: "Groupe privé · famille",
-    lieu: "Bruxelles · centre historique",
-    activite: "Balade gourmande – Food tour",
-    format: "Balade guidée · environ 2 h",
-    cover: "balade-chocolat",
-    excerpt: "Pralines chez deux chocolatiers, halte dans un bar typiquement bruxellois et anecdotes sur la ville : une balade qui plaît à toutes les générations.",
-    contexte: "La famille souhaitait découvrir Bruxelles autrement le temps d’un week-end, avec une activité adaptée à tous les âges et des alternatives sans alcool.",
-    steps: [
-      { t: "Le centre historique", d: "Le guide fait découvrir les lieux emblématiques et les secrets de Bruxelles." },
-      { t: "Bruxelles et ses pralines", d: "Halte chez deux chocolatiers, avec dégustation de pralines artisanales soigneusement sélectionnées." },
-      { t: "La halte bière", d: "Direction un bar typiquement bruxellois pour une dégustation, avec des alternatives sans alcool pour les plus jeunes." }
-    ],
-    photos: ["balade-chocolat", "particuliers-guide-famille", "chocolaterie", "balade-toast", "balade-manneken"]
-  }
+  { slug: "casino-de-la-biere-seminaire", title: "Un Casino de la Bière pour clôturer un séminaire",
+    client: "Entreprise", lieu: "Bruxelles", activite: "Casino de la Bière", cover: "casino-table",
+    excerpt: "Jetons, croupiers-biérologues et bières belges servies à l’aveugle pour terminer une journée de travail en beauté.",
+    contexte: "L’entreprise souhaitait une activité courte et fédératrice pour clôturer son séminaire, accessible à tous, amateurs de bière comme néophytes.",
+    deroulement: ["Accueil et règles du jeu autour des tables de casino.", "Dégustations à l’aveugle : robe, arômes, provenance, degré d’alcool.", "Révélation des réponses et récompenses pour les plus perspicaces."],
+    photos: ["casino-table", "casino-detail", "casino-noir-blanc", "casino-rose", "degustation-mystere", "degustation-verres"] },
+  { slug: "soiree-bieres-abbaye", title: "Une soirée d’entreprise au temps des abbayes",
+    client: "Agence événementielle", lieu: "Bruxelles", activite: "Animation de soirée", cover: "soiree-abbaye-moine",
+    excerpt: "Moines comédiens, lueur des bougies et bières d’abbaye pour accueillir les invités d’une agence partenaire.",
+    contexte: "L’agence recherchait une animation à forte identité belge pour la soirée de ses invités.",
+    deroulement: ["Accueil des invités par des comédiens en tenue de moines.", "Dégustation de bières d’abbaye et trappistes racontée par nos biérologues.", "Animation en continu tout au long de la réception."],
+    photos: ["soiree-abbaye-moine", "soiree-abbaye-invites", "soiree-abbaye-toast", "soiree-abbaye-moines", "equipe-reception", "reception-invites"] },
+  { slug: "reception-bar-a-bieres", title: "Un bar à bières élégant pour une réception d’entreprise",
+    client: "Entreprise", lieu: "Bruxelles", activite: "Bar à bières élégant", cover: "reception-buffet",
+    excerpt: "Une sélection de bières belges servie et commentée par nos biérologues tout au long de la réception.",
+    contexte: "L’entreprise souhaitait remplacer le bar classique de sa réception par une animation élégante et typiquement belge.",
+    deroulement: ["Sélection d’au moins cinq bières de Belgique.", "Service et présentation de chaque bière par nos biérologues.", "Dégustation intégrée au buffet et à la réception."],
+    photos: ["reception-buffet", "reception-invites", "reception-bar", "bar-bieres-bouteilles", "biere-houblon", "bar-bieres-soiree"] },
+  { slug: "beer-quiz-atelier-chocolat", title: "Beer Quiz et atelier chocolat",
+    client: "Entreprise", lieu: "Bruxelles", activite: "Workshop Chocolat & Bière", cover: "atelier-chocolat",
+    excerpt: "Deux équipes, deux ateliers : un quiz de dégustation d’un côté, la création de chocolats de l’autre.",
+    contexte: "Le groupe souhaitait découvrir deux icônes belges en une seule activité participative.",
+    deroulement: ["Le groupe est divisé en deux équipes qui alternent.", "Beer Quiz : quatre bières belges en verres opaques.", "Atelier chocolat avec un maître chocolatier bruxellois."],
+    photos: ["atelier-chocolat", "chocolat-beer-my-guest", "chocolat-creation", "chocolat-atelier-tablier", "soiree-chocolat-neon", "chocolaterie"] },
+  { slug: "bruxelles-a-velo", title: "Bruxelles à vélo, entre street art et brasseries",
+    client: "Groupe international", lieu: "Bruxelles", activite: "City Tours à Vélo", cover: "velo-selfie",
+    excerpt: "Une balade guidée à vélo électrique entre incontournables, fresques BD et brasserie bruxelloise.",
+    contexte: "Le groupe disposait d’une demi-journée et souhaitait découvrir Bruxelles de manière active.",
+    deroulement: ["Départ depuis l’hôtel avec le guide.", "Incontournables et parcours bande dessinée.", "Halte dans une brasserie bruxelloise."],
+    photos: ["velo-selfie", "velo-brasserie", "velo-bd", "velo-cinquantenaire", "velo-silos", "street-art"] },
+  { slug: "degustation-basilique-koekelberg", title: "Bières d’abbaye dans la Basilique de Koekelberg",
+    client: "Agence réceptive", lieu: "Koekelberg", activite: "Atelier bière dans la Basilique", cover: "basilique-nef",
+    excerpt: "Visite guidée, panorama sur Bruxelles et dégustation de bières d’abbaye dans un décor Art déco.",
+    contexte: "Pour un programme incentive, l’agence cherchait un lieu d’exception et une activité culturelle conviviale.",
+    deroulement: ["Découverte de la basilique avec le guide.", "Panorama à 360° sur Bruxelles.", "Dégustation « La Bière et l’Église »."],
+    photos: ["basilique-nef", "basilique-verres", "basilique-degustation", "basilique-vitrail", "lieu-art-nouveau", "verre-fut"] },
+  { slug: "jeu-de-piste-anniversaire", title: "Un jeu de piste bière pour fêter un anniversaire",
+    client: "Groupe privé", lieu: "Bruxelles", activite: "Jeu de piste bière", cover: "jeu-piste-equipe",
+    excerpt: "Roadbook en main, les équipes ont sillonné Bruxelles entre énigmes, défis photo et dégustations à l’aveugle.",
+    contexte: "Un groupe d’amis cherchait une activité originale et ludique pour célébrer un anniversaire.",
+    deroulement: ["Accueil par l’animateur et remise des roadbooks.", "Énigmes, défis photo et quiz d’observation.", "Dégustations à l’aveugle dans trois bars, puis révélation du gagnant."],
+    photos: ["jeu-piste-equipe", "jeu-piste-roadbook", "jeu-piste-couple", "jeu-piste-groupe", "jeu-piste-in-den-vos", "jeu-piste-belgian-beer"] },
+  { slug: "balade-gourmande-famille", title: "Une balade gourmande en famille",
+    client: "Groupe privé", lieu: "Bruxelles", activite: "Balade Gourmande – Food Tour", cover: "balade-chocolat",
+    excerpt: "Pralines, halte dans un bar bruxellois et anecdotes sur la ville, pour toutes les générations.",
+    contexte: "La famille souhaitait découvrir Bruxelles autrement, avec une activité adaptée à tous les âges.",
+    deroulement: ["Découverte du centre historique avec le guide.", "Halte chez deux chocolatiers.", "Halte dans un bar typiquement bruxellois."],
+    photos: ["balade-chocolat", "particuliers-guide-famille", "chocolaterie", "balade-toast", "balade-manneken", "grand-place"] }
 ];
-
-/* --------------------------------------------------------------------------
-   EXPÉRIENCES — contenus réels repris des fiches du site actuel
-   (Wix Stores aujourd'hui, affichées "Out of stock").
-   -------------------------------------------------------------------------- */
-BMG.experiences = [
-  {
-    slug: "beer-tasting-quiz", title: "Beer Tasting Quiz", img: "tablee-bougies",
-    signature: "Notre expérience signature",
-    audience: ["entreprises", "particuliers"], types: ["degustation", "jeu"],
-    short: "Une dégustation interactive guidée par un zythologue : histoire, anecdotes, dégustation à l’aveugle et quiz.",
-    duree: "1 h à 1 h 30", groupe: "2 à 300 pers.",
-    long: [
-      "Si nous sommes experts en activités et expériences à Bruxelles et partout en Belgique, la bière reste incontestablement l’une de nos grandes spécialités.",
-      "Guidé par un zythologue professionnel et dynamique, plongez dans l’univers de la bière belge à travers une dégustation interactive mêlant histoire, culture, anecdotes et challenges. Dégustation à l’aveugle, quiz et découvertes sensorielles : une expérience conviviale, accessible et résolument belge.",
-      "L’activité peut être organisée dans l’un de nos lieux partenaires ou directement sur votre lieu de réunion, conférence ou événement. Des alternatives sans alcool sont toujours possibles sur demande."
-    ]
-  },
-  {
-    slug: "casino-de-la-biere", title: "Casino de la Bière", img: "casino-table",
-    audience: ["entreprises"], types: ["degustation", "jeu", "soiree"],
-    short: "Jetons, croupiers-biérologues et bières belges servies à l’aveugle : faites vos jeux… et misez sur la bonne bière.",
-    duree: "1 h à 1 h 30 (ou en continu)", groupe: "jusqu’à 30 pers. · plus en format stand",
-    long: [
-      "Autour de nos tables de Casino de la Bière, nos croupiers-biérologues distribuent les jetons et servent les bières belges à l’aveugle. À vous de miser sur la bonne réponse : couleur, arômes, saveurs, provenance, degré d’alcool…",
-      "Deux formats phares : « Dégustation & Challenge », une activité de groupe d’1 h à 1 h 30 pour 30 participants maximum ; ou le « Stand Casino de la Bière », idéal pour une soirée incentive, un cocktail ou une réception : les participants rejoignent les tables au fur et à mesure.",
-      "Lambics, bières d’abbaye, IPA, bières vieillies en fût… Des cadeaux sont prévus pour les plus perspicaces."
-    ]
-  },
-  {
-    slug: "top-chef-cocktail-biere", title: "Top Chef – Cocktail bière", img: "cocktail-biere",
-    audience: ["entreprises"], types: ["jeu", "gourmand"],
-    short: "À vos shakers ! Les équipes s’affrontent pour créer leurs cocktails à base de bière devant un jury fun et impitoyable.",
-    duree: "1 h à 1 h 30", groupe: "1 à 40 pers.",
-    long: [
-      "Inspiré des concours culinaires télévisés, notre Top Chef – Cocktail Bière transforme votre groupe en équipes prêtes à s’affronter autour d’un challenge créatif et convivial.",
-      "Bières, jus de fruits, sirops, fruits frais, décorations… tout est à disposition pour réaliser trois cocktails autour de différents défis, dont un challenge final. Chaque création passe devant le jury : goût, présentation, respect du thème.",
-      "Dans vos locaux ou dans un espace privatisé, à Bruxelles ou ailleurs en Belgique. Une version entièrement sans alcool est possible."
-    ]
-  },
-  {
-    slug: "workshop-chocolat-biere", title: "Beer Quiz & atelier chocolat", img: "atelier-chocolat",
-    audience: ["entreprises"], types: ["jeu", "gourmand", "degustation"],
-    short: "Une activité deux-en-un : quiz de dégustation de bières belges et création de chocolats avec un maître chocolatier.",
-    duree: "2 h à 3 h", groupe: "2 à 180 pers.",
-    long: [
-      "Votre groupe est divisé en deux équipes qui alternent entre deux expériences emblématiques.",
-      "Beer Quiz : quatre dégustations de bières belges, verres opaques, questions surprenantes et petits défis. Atelier chocolat : aux côtés d’un maître chocolatier bruxellois, découvrez les secrets du chocolat belge et réalisez vos propres créations.",
-      "Dans le centre de Bruxelles, dans un autre lieu adapté ou directement sur votre lieu de conférence. Le format est modulable selon votre groupe, votre budget et vos contraintes."
-    ]
-  },
-  {
-    slug: "pairing-biere-chocolat", title: "Pairing bière & chocolat", img: "chocolaterie",
-    audience: ["entreprises", "particuliers"], types: ["degustation", "gourmand"],
-    short: "Deux icônes belges, un accord parfait : quatre bières et six pralines à associer avec un zythologue.",
-    duree: "1 h à 1 h 30", groupe: "2 à 300 pers.",
-    long: [
-      "Et si deux des plus grands symboles de la Belgique formaient aussi l’accord parfait ? Guidé par un zythologue, découvrez les associations surprenantes entre bières belges et chocolats artisanaux.",
-      "Au programme : quatre bières soigneusement sélectionnées et six pralines de qualité, à déguster et à associer pour comprendre comment arômes, textures et saveurs se complètent… ou vous surprennent.",
-      "Des alternatives sans alcool peuvent être proposées. Dans un lieu partenaire du centre historique, dans un lieu choisi pour votre groupe ou sur le lieu de votre événement."
-    ]
-  },
-  {
-    slug: "jeux-de-piste", title: "Jeux de piste gourmands", img: "jeu-piste-equipe",
-    audience: ["entreprises", "particuliers"], types: ["jeu", "visite"],
-    short: "En équipe, suivez les indices dans les ruelles de Bruxelles : BD, street art, bière, chocolat… et bonne humeur.",
-    duree: "2 h à 2 h 30", groupe: "2 à 300 pers.",
-    long: [
-      "Partez à l’aventure au cœur de Bruxelles : suivez les indices, relevez des challenges et découvrez la ville autrement, entre anecdotes insolites, culture et bonne humeur.",
-      "Plusieurs expériences : Jeu de piste BD, Street Art & Chocolat ; Jeu de piste Bière & Chocolat ; jeux de piste sur mesure, adaptés à votre groupe et à vos envies.",
-      "Idéal pour les entreprises, les team-buildings, les groupes d’amis ou les événements privés."
-    ]
-  },
-  {
-    slug: "balade-gourmande", title: "Balade gourmande – Food tour", img: "balade-chocolat",
-    signature: "L’un de nos best-sellers",
-    audience: ["entreprises", "particuliers"], types: ["visite", "gourmand"],
-    short: "Pralines chez deux chocolatiers, halte bière dans un bar bruxellois et anecdotes sur la ville.",
-    duree: "2 h à 2 h 30", groupe: "2 à 400 pers.",
-    long: [
-      "Notre incontournable pour découvrir la ville autrement, à Bruxelles mais aussi à Bruges, Gand et Anvers.",
-      "Avec un guide local passionné, explorez les incontournables et les petites rues plus confidentielles. Halte chez deux chocolatiers, avec dégustation de trois pralines artisanales, puis direction un bar typiquement bruxellois pour déguster deux bières belges.",
-      "Dégustations supplémentaires, autres spécialités belges, parcours plus court ou plus long : tout peut être adapté à votre groupe et à la saison."
-    ]
-  },
-  {
-    slug: "basilique-koekelberg", title: "Atelier bière dans la Basilique", img: "basilique-verres",
-    audience: ["entreprises"], types: ["degustation", "visite"],
-    short: "Visite de la Basilique de Koekelberg, panorama à 360° et dégustation « La Bière et l’Église ».",
-    duree: "2 h à 2 h 30", groupe: "1 à 120 pers.",
-    long: [
-      "Entrez dans la Basilique nationale de Koekelberg, joyau Art déco et l’un des monuments les plus étonnants de Bruxelles. Avec votre guide, découvrez son architecture et son histoire avant d’admirer un panorama à 360° sur la ville.",
-      "Puis place à « La Bière et l’Église » : une dégustation autour des bières d’abbaye et trappistes qui retrace les liens entre traditions monastiques et savoir-faire brassicole belge.",
-      "Envie d’un autre lieu d’exception ? D’autres lieux emblématiques ou insolites sont possibles sur demande."
-    ]
-  },
-  {
-    slug: "brasserie-historique", title: "Brasserie historique & bières modernes", img: "brasserie-futs",
-    audience: ["entreprises", "particuliers"], types: ["visite", "degustation"],
-    short: "Du lambic brassé comme autrefois aux créations d’aujourd’hui : Bruxelles racontée par sa bière.",
-    duree: "1 h à 3 h", groupe: "2 à 100 pers.",
-    long: [
-      "L’expérience commence dans une brasserie historique unique, à deux pas de la Gare du Midi, où la bière est encore produite selon des méthodes ancestrales. Vous y découvrirez le lambic, bière historique de Bruxelles issue de la fermentation spontanée.",
-      "Vous poursuivez à pied vers le centre historique avec votre guide, puis changement d’époque avec les bières d’aujourd’hui.",
-      "Les deux visages de la bière bruxelloise : les méthodes d’autrefois face au brassage contemporain."
-    ]
-  },
-  {
-    slug: "bruxelles-cachee-belgian-beer-world", title: "Bruxelles cachée & Belgian Beer World", img: "lieu-bourse",
-    audience: ["entreprises", "particuliers"], types: ["visite", "degustation"],
-    short: "Sur les traces du Bruxelles disparu, jusqu’à la Bourse et son rooftop avec vue sur la ville.",
-    duree: "1 h à 2 h", groupe: "2 à 300 pers.",
-    long: [
-      "Partez sur les traces du Bruxelles disparu : l’ancienne rivière enfouie sous la ville, les quartiers transformés et les histoires qui ont façonné le centre historique.",
-      "Le parcours mène jusqu’à la Bourse de Bruxelles, entièrement rénovée, pour découvrir le Belgian Beer World et la culture brassicole belge comme un véritable patrimoine.",
-      "Pour terminer : le rooftop de la Bourse, avec sa vue sur Bruxelles et une bière (ou une alternative sans alcool)."
-    ]
-  },
-  {
-    slug: "city-tours-velo", title: "City tours à vélo", img: "velo-selfie",
-    audience: ["entreprises", "particuliers"], types: ["visite"],
-    short: "Bruxelles, Gand, Anvers, Bruges… à vélo (principalement électrique) avec un guide local.",
-    duree: "2 h à 3 h (jusqu’à une journée)", groupe: "2 à 120 pers.",
-    long: [
-      "Enfourchez votre vélo pour une balade dynamique entre incontournables, quartiers méconnus, anecdotes et petites surprises.",
-      "Parcours au choix : incontournables et hors des sentiers battus, architecture et patrimoine, bande dessinée et street art, histoire brassicole, bière et chocolat… ou un itinéraire entièrement sur mesure.",
-      "Départ et arrivée où vous le souhaitez : hôtel, lieu de conférence, restaurant. Pauses café, bière, chocolat ou visite de brasserie en option."
-    ]
-  },
-  {
-    slug: "visites-guidees", title: "Visites guidées pédestres", img: "street-art",
-    audience: ["entreprises", "particuliers"], types: ["visite"],
-    short: "Bruxelles avec un local : incontournables, Art nouveau, BD et street art, quartier royal ou européen…",
-    duree: "1 h à une journée", groupe: "2 à 500 pers.",
-    long: [
-      "Explorez Bruxelles à pied, bien au-delà de ses incontournables, avec un guide local passionné : lieux emblématiques, petites rues, anecdotes et curiosités.",
-      "Choisissez votre Bruxelles : découverte et incontournables, Art nouveau et Art déco, bande dessinée et street art, quartier royal, quartier européen, histoire de Bruxelles, hors des sentiers battus…",
-      "Toutes nos visites sont modulables et peuvent être enrichies : musée, monument, exposition ou autre expérience bruxelloise."
-    ]
-  },
-  {
-    slug: "institutions-europeennes", title: "Explorez les institutions européennes", img: "velo-cinquantenaire",
-    audience: ["entreprises"], types: ["visite"],
-    short: "Parlement, Commission, Parc Léopold, Cinquantenaire : comprendre l’Europe au cœur de Bruxelles.",
-    duree: "1 h 30 à 3 h (ou journée)", groupe: "2 à 500 pers.",
-    long: [
-      "Entrez dans les coulisses de l’Union européenne et découvrez pourquoi Bruxelles est devenue l’un des centres politiques les plus importants au monde.",
-      "Plusieurs formules : balade guidée dans le Quartier européen ; balade et Parlamentarium ; balade et Maison de l’Histoire européenne ; balade et Parlement européen avec accès à l’Hémicycle.",
-      "Programme sur mesure, selon les disponibilités des institutions, et combinable avec une dégustation, un jeu de piste ou une activité de team-building."
-    ]
-  },
-  {
-    slug: "bruxelles-royal-coudenberg", title: "Bruxelles royal & Palais du Coudenberg", img: "lieu-ruines",
-    audience: ["entreprises", "particuliers"], types: ["visite"],
-    short: "Du Parc de Bruxelles à la Place Royale, puis sous la ville, dans les vestiges du palais de Charles Quint.",
-    duree: "À partir de 2 h", groupe: "2 à 200 pers.",
-    long: [
-      "Explorez le Quartier royal à travers son architecture, ses anecdotes, ses personnages et les grandes pages de l’histoire belge.",
-      "Puis descendez sous la ville pour explorer les vestiges du Palais du Coudenberg, ancienne résidence de Charles Quint : un voyage dans le Bruxelles disparu.",
-      "La visite peut se terminer par une dégustation de bières belges accompagnée d’un quiz."
-    ]
-  },
-  {
-    slug: "anvers-en-une-journee", title: "Anvers en une journée", img: "anvers",
-    audience: ["entreprises"], types: ["visite"],
-    short: "Diamant, mode, architecture et port : une journée sur mesure dans la ville des contrastes.",
-    duree: "1 h à une journée", groupe: "2 à 500 pers.",
-    long: [
-      "Historique, audacieuse, élégante et contemporaine : Anvers est une ville de contrastes. Son histoire se lit dans ses façades, ses églises et ses maisons historiques.",
-      "Une journée type : plongée dans l’univers du diamant, déjeuner dans un lieu choisi selon l’expérience recherchée, découverte du centre historique, du quartier du diamant ou du port.",
-      "Ce n’est qu’un exemple : dites-nous qui vous êtes, le temps dont vous disposez et ce que vous aimez."
-    ]
-  },
-  {
-    slug: "animations-soirees", title: "Animations pour vos soirées", img: "bar-bieres-soiree",
-    audience: ["entreprises"], types: ["soiree"],
-    short: "Mentaliste, comédiens Tintin & Haddock, musique, Casino de la Bière, bar à bières élégant…",
-    duree: "1 h à 4 h ou plus", groupe: "10 à 400 pers.",
-    long: [
-      "Ce sont souvent les petites touches qui font les grandes soirées. Cocktail, dîner, incentive ou événement d’entreprise : choisissez une ou plusieurs animations.",
-      "Mentaliste et magicien close-up ; Tintin et Capitaine Haddock (comédiens) ; chanteuses et saxophone ; Casino de la Bière ; bar à bières élégant et éphémère… et bien plus encore : DJ, musiciens, artistes ou concepts sur mesure.",
-      "Dans des hôtels, lieux privatisés ou lieux d’exception, à Bruxelles et ailleurs en Belgique."
-    ]
-  },
-  {
-    slug: "bar-a-bieres-elegant", title: "Bar à bières élégant", img: "bar-bieres-bouteilles",
-    audience: ["entreprises"], types: ["soiree", "degustation"],
-    short: "Au moins cinq bières de Belgique, servies et présentées par nos biérologues.",
-    duree: "Selon l’événement", groupe: "Sur demande",
-    long: [
-      "Nos biérologues sélectionnent pour vous un minimum de cinq bières de Belgique. Ils servent, présentent les bières et accompagnent les participants dans leur dégustation : goûts, arômes, style.",
-      "Blonde légère, IPA amère et fruitée, stout aux notes de café, ambrée aux arômes de caramel, lambic aux notes acidulées, bières vieillies… chacun trouvera son bonheur."
-    ]
-  },
-  {
-    slug: "musee-des-egouts", title: "Dégustation insolite au Musée des Égouts", img: "egouts-tunnel",
-    audience: ["entreprises", "particuliers"], types: ["visite", "degustation"],
-    short: "L’histoire de l’eau à Bruxelles — élément clé de la bière — suivie d’une dégustation sur place.",
-    duree: "Sur demande", groupe: "Sur demande",
-    long: [
-      "Rassurez-vous : il ne s’agit pas de patauger dans un souterrain sombre ! La visite du Musée des Égouts vous plonge dans l’histoire locale de l’eau, élément qui a façonné la ville et reste fondamental dans la fabrication de la bière.",
-      "L’expérience commence par une visite du musée, suivie d’une dégustation de bières sur place."
-    ]
-  }
-];
-
-/* Expériences "réservables" pour les particuliers (pages dédiées actuelles). */
-BMG.particuliers = [
-  {
-    slug: "jeu-de-piste-biere",
-    title: "Le jeu de piste bière",
-    subtitle: "Les secrets du lambic",
-    img: "jeu-piste-roadbook",
-    text: "En équipe de 4 à 8 personnes, munis d’un roadbook, résolvez une enquête, relevez des défis et dégustez des galopins de bière à l’aveugle dans trois bars emblématiques. Un animateur vous accompagne jusqu’à la révélation du grand gagnant.",
-    points: ["Énigmes, défis photo et quiz d’observation", "Dégustations à l’aveugle dans 3 bars", "Pas fan de bière ? Optez pour un soft", "Existe aussi en version bière & chocolat"]
-  },
-  {
-    slug: "journee-biere",
-    title: "La journée bière à Bruxelles",
-    subtitle: "Brasserie historique, lunch et jeu de piste",
-    img: "cantillon-caisses",
-    text: "Visite de la plus ancienne brasserie de Bruxelles et dégustation de trois bières, déjeuner dans un restaurant apprécié des Bruxellois, puis jeu de piste dans les ruelles de la ville pour terminer la journée en beauté.",
-    points: ["Visite guidée d’une brasserie historique (lambic, gueuze)", "Déjeuner : plat, dessert, deux boissons et café", "Jeu de piste avec dégustation à l’aveugle", "Aussi le lundi, mardi, jeudi et vendredi pour les groupes privés"]
-  }
-];
-
-/* --------------------------------------------------------------------------
-   AGENDA — EXEMPLES (à gérer dans Wix Events)
-   Les dates ci-dessous sont fictives.
-   -------------------------------------------------------------------------- */
-BMG.events = [
-  { day: "14", month: "nov.", weekday: "Samedi", title: "Jeu de piste bière — séance ouverte", time: "14 h 00", place: "Bruxelles · centre historique", tag: "Particuliers", text: "Formez votre équipe ou rejoignez-en une : roadbook, défis et dégustations à l’aveugle." },
-  { day: "26", month: "nov.", weekday: "Jeudi", title: "Dégustation bière du mois", time: "19 h 00", place: "Bruxelles · lieu partenaire", tag: "Dégustation", text: "Un thème, une sélection de bières belges et un zythologue pour vous les raconter." },
-  { day: "05", month: "déc.", weekday: "Samedi", title: "Journée bière à Bruxelles", time: "11 h 00", place: "Bruxelles · Gare du Midi", tag: "Journée", text: "Brasserie historique, déjeuner bruxellois et jeu de piste l’après-midi." }
-];
-
-/* Libellés des types d'expériences (filtres du catalogue). */
-BMG.types = {
-  degustation: "Dégustation",
-  jeu: "Jeu & challenge",
-  visite: "Visite & découverte",
-  gourmand: "Gourmand",
-  soiree: "Soirée & animation"
-};

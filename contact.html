@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maquette · Contact & demande de devis — Beer My Guest</title>
-  <meta name="description" content="Réservation, information ou devis entreprise : écrivez à Beer My Guest ou appelez le +32 4XX XX XX XX.">
+  <title>Maquette · Contact — Beer My Guest</title>
+  <meta name="description" content="Réservation, information ou devis entreprise : écrivez-nous ou appelez directement.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -14,94 +14,37 @@
 </head>
 <body data-page="contact">
   <div id="site-header"></div>
-
   <main>
-    <section class="section section--tight" data-wix="Section en-tête · H1 + texte">
-      <div class="container">
-        <p class="breadcrumb"><a href="accueil.html">Accueil</a><span>/</span>Contact</p>
-        <div class="section-head" style="margin-bottom:0">
-          <div class="reveal">
-            <p class="eyebrow">Contact & devis</p>
-            <h1 class="display" style="font-size:clamp(46px,5.6vw,84px)">Une question&nbsp;? <em>Parlons-en.</em></h1>
-          </div>
-          <p class="lead reveal">Réservation, information ou devis entreprise : nous vous répondons rapidement, avec un interlocuteur dédié.</p>
-        </div>
-      </div>
+    <section class="hero" data-wix="Modèle 1 · Hero : image de fond assombrie + titre + texte">
+      <img src="assets/img/facade-bruxelles.jpg" alt="">
+      <div class="container"><div class="hero__text reveal"><h1 class="h1">Une question ? <em>Parlons-en.</em></h1><p class="lead">Réservation, information ou devis entreprise : on vous répond rapidement, avec un interlocuteur dédié.</p></div></div>
     </section>
-
-    <section class="section section--flush-top" data-wix="Section 2 colonnes · Wix Forms (formulaire de devis en français) | Bloc coordonnées sur fond sombre">
-      <div class="container" style="display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:56px;align-items:start" id="contact-grid">
+    <section class="section" data-wix="Modèle 2 · Texte | formulaire Wix Forms (2 colonnes)">
+      <div class="container split" style="align-items:start">
         <div class="reveal">
-          <form class="form" data-quote-form novalidate>
-            <fieldset class="field field--full segmented">
-              <legend>Vous êtes</legend>
-              <label><input type="radio" name="profil" value="entreprise" checked><span>Une entreprise</span></label>
-              <label><input type="radio" name="profil" value="agence"><span>Une agence (MICE / DMC)</span></label>
-              <label><input type="radio" name="profil" value="particulier"><span>Un particulier</span></label>
-            </fieldset>
-            <div class="field"><label for="f-prenom">Prénom *</label><input id="f-prenom" name="prenom" autocomplete="given-name" required></div>
-            <div class="field"><label for="f-nom">Nom *</label><input id="f-nom" name="nom" autocomplete="family-name" required></div>
-            <div class="field"><label for="f-societe">Société <span class="muted">(si applicable)</span></label><input id="f-societe" name="societe" autocomplete="organization"></div>
-            <div class="field"><label for="f-email">E-mail *</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-            <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel"></div>
-            <div class="field"><label for="f-experience">Expérience souhaitée</label><input id="f-experience" name="experience" list="experiences-list" placeholder="Ex. : Casino de la Bière, jeu de piste…"></div>
-            <datalist id="experiences-list">
-              <option value="Team-building"><option value="Incentive / séminaire"><option value="Animations de soirée"><option value="Beer Tasting Quiz"><option value="Casino de la Bière"><option value="Jeu de piste bière"><option value="Journée bière"><option value="Balade gourmande – Food tour"><option value="Pairing bière & chocolat"><option value="City tour à vélo"><option value="Autre / sur mesure">
-            </datalist>
-            <div class="field"><label for="f-date">Date souhaitée</label><input id="f-date" name="date" type="date"></div>
-            <div class="field"><label for="f-pax">Nombre de participants</label>
-              <select id="f-pax" name="participants"><option value="">Choisir</option><option>1 à 9</option><option>10 à 30</option><option>31 à 80</option><option>81 à 200</option><option>Plus de 200</option></select></div>
-            <div class="field"><label for="f-ville">Ville</label>
-              <select id="f-ville" name="ville"><option>Bruxelles</option><option>Anvers</option><option>Gand</option><option>Bruges</option><option>Autre / à définir</option></select></div>
-            <div class="field"><label for="f-langue">Langue de l’activité</label>
-              <select id="f-langue" name="langue"><option>Français</option><option>Nederlands</option><option>English</option><option>Autre</option></select></div>
-            <div class="field field--full"><label for="f-message">Votre projet *</label><textarea id="f-message" name="message" required placeholder="Objectif, programme, contraintes, budget indicatif…"></textarea></div>
-            <label class="field--full small" style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" required style="margin-top:4px"> J’accepte que Beer My Guest utilise ces informations pour répondre à ma demande (texte RGPD à valider).</label>
-            <div class="field--full"><button class="btn btn-primary" type="submit">Envoyer ma demande</button></div>
+          <h2 class="h2">On sera ravis de vous lire.</h2>
+          <p class="lead">Particuliers ou entreprises, écrivez-nous — ou appelez directement.</p>
+          <p style="margin-top:28px"><strong>E-mail</strong><br><a href="#">contact@exemple.be</a></p>
+          <p><strong>Téléphone</strong><br><a href="#">+32 4XX XX XX XX</a></p>
+          <p><strong>Adresse</strong><br>Bruxelles, Belgique</p>
+        </div>
+        <div class="reveal">
+          <form class="form" data-form novalidate>
+            <div class="field"><label for="f1">Prénom *</label><input id="f1" required autocomplete="given-name"></div>
+            <div class="field"><label for="f2">Nom *</label><input id="f2" required autocomplete="family-name"></div>
+            <div class="field"><label for="f3">E-mail *</label><input id="f3" type="email" required autocomplete="email"></div>
+            <div class="field"><label for="f4">Téléphone</label><input id="f4" type="tel" autocomplete="tel"></div>
+            <div class="field field--full"><label for="f5">Sujet *</label><input id="f5" required></div>
+            <div class="field field--full"><label for="f6">Message *</label><textarea id="f6" required></textarea></div>
+            <div class="field--full"><button class="btn" type="submit">Envoyer le message</button></div>
           </form>
-          <div class="form-success" role="status">
-            <p class="eyebrow">Merci&nbsp;!</p>
-            <h2 class="h3" style="margin-bottom:12px">Votre demande est bien envoyée.</h2>
-            <p class="muted" style="margin:0">Prototype : aucun message n’est réellement transmis. Dans Wix, le formulaire envoie une notification par e-mail et enregistre la demande dans le tableau de bord.</p>
-          </div>
-        </div>
-        <aside class="contact-aside reveal">
-          <p class="eyebrow">Coordonnées</p>
-          <h2 class="h3">On sera ravis de vous lire.</h2>
-          <p style="color:rgba(245,239,229,.75);margin-top:12px">Particuliers ou entreprises, écrivez-nous ou appelez directement.</p>
-          <dl>
-            <dt>Téléphone</dt><dd><a href="#">+32 4XX XX XX XX</a></dd>
-            <dt>E-mail</dt><dd><a href="#">contact@exemple.be</a></dd>
-            <dt>Adresse</dt><dd>Bruxelles, Belgique</dd>
-            <dt>Langues</dt><dd>Français · Nederlands · English</dd>
-          </dl>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section bg-paper" id="faq" data-wix="Section · Titre + Texte repliable (Collapsible text) ou application FAQ — à vérifier dans Harmony">
-      <div class="container container--narrow">
-        <div class="section-head section-head--center reveal">
-          <p class="eyebrow">FAQ</p>
-          <h2 class="h2">Questions <em>fréquentes</em></h2>
-          <p class="lead">Réponses rédigées à partir des informations déjà présentes sur le site, à valider par la cliente.</p>
-        </div>
-        <div class="faq reveal">
-          <details><summary>Pour combien de personnes organisez-vous des expériences&nbsp;?</summary><p>De deux personnes à plusieurs centaines. Selon l’activité, nos formats accueillent de petits groupes jusqu’à 300 ou 400 participants, et jusqu’à 500 pour les visites guidées.</p></details>
-          <details><summary>Dans quelles villes intervenez-vous&nbsp;?</summary><p>À Bruxelles, Anvers, Gand et Bruges, et partout ailleurs en Belgique sur demande.</p></details>
-          <details><summary>En quelles langues se déroulent les activités&nbsp;?</summary><p>En français, en néerlandais et en anglais. D’autres langues sont possibles selon vos besoins.</p></details>
-          <details><summary>Et si certains participants ne boivent pas d’alcool&nbsp;?</summary><p>Aucun problème : des alternatives sans alcool sont proposées pour nos dégustations, et certains formats, comme le Top Chef – Cocktail bière, existent en version entièrement sans alcool.</p></details>
-          <details><summary>Où se déroulent les activités&nbsp;?</summary><p>Dans l’un de nos lieux partenaires au cœur du centre historique de Bruxelles, dans un lieu sélectionné pour votre groupe, ou directement sur le lieu de votre conférence ou de votre événement.</p></details>
-          <details><summary>Pouvez-vous organiser le transport&nbsp;?</summary><p>Oui : minivans jusqu’à 6 passagers, Mercedes Sprinter de 19 à 22 places ou autocars d’environ 50 places, pour vos transferts, excursions ou trajets entre villes.</p></details>
-          <details><summary>Comment fonctionne la carte cadeau&nbsp;?</summary><p>Elle est valable un an à partir de la date d’achat, sur l’ensemble des activités du site. Saisissez le code au moment du paiement, ou envoyez-le par e-mail pour une dégustation privée ou une activité sur mesure.</p></details>
+          <div class="form-success" role="status"><h3 class="h3">Merci !</h3><p class="muted" style="margin-top:8px">Prototype : aucun message n’est envoyé. Dans Wix, le formulaire envoie une notification par e-mail.</p></div>
         </div>
       </div>
     </section>
   </main>
-
   <div id="site-footer"></div>
   <script src="assets/js/data.js"></script>
   <script src="assets/js/main.js"></script>
-  <style>@media (max-width:1080px){#contact-grid{grid-template-columns:1fr!important}}</style>
 </body>
 </html>
